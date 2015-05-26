@@ -103,9 +103,3 @@ a.player:hover{
     /* Opera 10.5, IE 9 */
     /*-moz-border-radius: 30px;  Disabled for FF1+ */
 }
-
-.toggler { width: 500px; height: 200px; position: relative; }
-/*#button { padding: .5em 1em; text-decoration: none; }*/
-#effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
-#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
-.ui-effects-transfer { border: 2px dotted gray; }

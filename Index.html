@@ -1,10 +1,69 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<html ng-app="players">
+<head>
+	<title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
+	<script type="text/javascript" src="js/controllers/app.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+
+    <script>
+        $(function() {
+            $( "#accordion" ).accordion();
+        });
+    </script>
+
 </head>
 <body>
+<div class="head" ng-controller="playerControl">
+   <h1 id="heading">All time greats !!</h1>
 
-</body>
-</html>
+    <div id="accordion" class="sidebar left">
+        <div class="avatar-frame">
+            <img src="https://thenypost.files.wordpress.com/2014/09/pawn-bobby.jpg" alt=""/>
+        </div>
+        <br/>
+    <h3>Chess Players</h3>
+        <div id="accordian">
+            <!--<p>~ Bobby Fisher ~</p>-->
+            <!--<p>~ Magnus Carlsen ~</p>-->
+            <!--<ul>-->
+                <!--<li ng-class="bobbyActive"> <a href="#"  ng-click="setActive('bobby')">~ Bobby Fisher ~</a></li>-->
+                <!--<li ng-class="magnusActive"><a href="#/magnus"  ng-click="setActive('magnus')">~ Magnus Carlsen ~</a></li>-->
+
+            <!--</ul>-->
+
+                <a class="player" href="#" ng-class="bobbyActive"  ng-click="setActive('bobby')">~ Bobby Fisher ~</a>
+            <hr/>
+                <a class="player" href="#/magnus" ng-class="magnusActive"  ng-click="setActive('magnus')">~ Magnus Carlsen ~</a>
+            <hr/>
+
+        </div>
+    <h3>Rugger Players</h3>
+        <div>
+            <p>~ Jonah Lomu ~</p>
+            <p>~ Kieran Read ~</p>
+        </div>
+    <h3>Cricket Players</h3>
+        <div>
+            <p>~ Donald Bradman ~</p>
+            <p>~ Kumar Snagakkara ~</p>
+        </div>
+</div>
+
+<!--<div class="main_content" ng-show="sidebarURL">-->
+    <!--<p ng-model="cmb">{{cmb}}</p>-->
+    <!--<ng-include src="setURL("'bobby'")"></ng-include>-->
+<!--</div>-->
+<div class="main_content" ng-view></div>
+
+</div>
+
+
+
+</body> 
+</html>  
