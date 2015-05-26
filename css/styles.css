@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Radley:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+.sidebar{
+    background-color: rgba(77, 84, 86, 0.34);
+    height:90%;
+    width: 20%;
+    border: hidden;
+    border-radius: 5px;
+    /*padding-top: 2px;*/
+
+}
+.sidebar p{
+    font-family: Radley; font-style: italic; font-size: 120%; text-align: center; color: #ffffff
+}
+
+.sidebar a{
+    font-family: Radley; font-style: italic; font-size: 120%; text-align: center; color: #ffffff;
+    text-decoration: none;
+    margin-left: 20%;
+}
+
+a.player:hover{
+    font-size:150%;
+    color: #ffca2f;
+    font-family: cursive;
+    margin-left: 10%;
+}
+
+
+.sidebar h3{
+    font-family: sans-serif; font-style: italic; font-size: 150%; text-align: center; color: #ffffff;
+    cursor: pointer;
+    border: solid 2px #68FF3F;
+    border-radius: 5px;
+    background-color: #000000;
+    margin: 5%;
+
+}
+
+
+
+.content{
+    background-color: #e38d13;
+    width: 80%;
+    height: 100%;
+}
+
+.head{
+    width: 100%;
+    height: 100%;
+
+}
+
+.main_content{
+    margin-left: 20%;
+    height: 80%;
+}
+
+.left {
+    position: absolute;
+    left: 0px;
+    width: 20%;
+}
+
+
+#heading{
+    /*TODO add the css for heading*/
+    text-align: center;
+    background-color: #0081c2;
+    width: 100%;
+    border: hidden;
+    border-radius: 2px;
+    /*height: 100%;*/
+}
+
+#bobbyImage{
+    width: 35%;
+    height: 50%;
+    border: hidden;
+    border-radius: 50%;
+}
+
+.bobby p,div{
+    font-family: 'Nunito', sans-serif;
+    text-align: justify;
+}
+.bobby h1{
+    text-align: center;
+}
+
+.bobby hr{
+    width: 60%;
+}
+
+.avatar-frame,.avatar-frame img{
+    margin: 13%;
+    margin-top: 8%;
+    margin-bottom: 1%;
+    width: 70%;
+    /*height: %;*/
+    -webkit-border-radius: 30px;
+    border-radius: 80%;
+    /* Opera 10.5, IE 9 */
+    /*-moz-border-radius: 30px;  Disabled for FF1+ */
+}
+
+.toggler { width: 500px; height: 200px; position: relative; }
+/*#button { padding: .5em 1em; text-decoration: none; }*/
+#effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
+#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+.ui-effects-transfer { border: 2px dotted gray; }
