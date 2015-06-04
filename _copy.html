@@ -1,3 +1,4 @@
+
 <html ng-app="players">
 <head>
 	<title>Demo</title>
@@ -9,7 +10,7 @@
     <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/styles_copy.css"/>
 
     <script>
         $(function() {
@@ -52,52 +53,45 @@
     </script>
 
 </head>
-<body>
+<body ng-controller="playerControl">
+<main>
+    <section>
 
-<!--<div class="head" ng-controller="playerControl">-->
-    <!--<span><a  href="#/" ng-class="mainActive"  ng-click="setActive('bobby')">~ Home ~</a> <h1 id="heading">All time greats</h1></span>-->
-
-<h1 id="heading">All time greats</h1>
-<div>
-    <div id="accordion" class="sidebar left" ng-controller="playerControl">
+    </section>
+</main>
+<aside>
+    <div id="accordion">
         <div class="avatar-frame">
             <img id="ava" src="res/default.jpg" alt=""/>
         </div>
         <br/>
-    <h3 id="chess" onclick="changeChess()">Chess Players</h3>
+        <h3 id="chess" onclick="changeChess()">Chess Players</h3>
         <div id="accordian">
             <a class="player" href="#/" ng-class="mainActive"  ng-click="setActive('bobby')">~ Home ~</a>
             <hr/>
-                <a class="player" href="#/bobby" ng-class="bobbyActive"  ng-click="setActive('bobby')">~ Bobby Fisher ~</a>
+            <a class="player" href="#/bobby" ng-class="bobbyActive"  ng-click="setActive('bobby')">~ Bobby Fisher ~</a>
             <hr/>
-                <a class="player" href="#/magnus" ng-class="magnusActive"  ng-click="setActive('magnus')">~ Magnus Carlsen ~</a>
+            <a class="player" href="#/magnus" ng-class="magnusActive"  ng-click="setActive('magnus')">~ Magnus Carlsen ~</a>
             <hr/>
 
         </div>
-    <h3 id="rugger" onclick="changeRugger()">Rugger Players</h3>
+        <h3 id="rugger" onclick="changeRugger()">Rugger Players</h3>
         <div>
             <p>~ Jonah Lomu ~</p>
             <p>~ Kieran Read ~</p>
         </div>
-    <h3 id="cricket" onclick="changeCricket()">Cricket Players</h3>
+        <h3 id="cricket" onclick="changeCricket()">Cricket Players</h3>
         <div>
             <p>~ Donald Bradman ~</p>
             <p>~ Kumar Snagakkara ~</p>
         </div>
-</div>
+    </div>
+</aside>
 
 <div class="main_content" ng-view></div>
-<!--<div class="main_content" ng-show="sidebarURL">-->
-    <!--<p ng-model="cmb">{{cmb}}</p>-->
-    <!--<ng-include src="setURL("'bobby'")"></ng-include>-->
-<!--</div>-->
-
-
-</div>
-<!--</div>-->
-<!--<footer>-->
-    <!--Kasun Balasooriya-->
-<!--</footer>-->
+<footer>
+Kasun Balasooriya
+</footer>
 
 </body> 
 </html>  

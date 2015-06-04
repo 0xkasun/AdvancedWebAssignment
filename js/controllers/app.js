@@ -9,6 +9,7 @@ function playerControl($scope){
     $scope.setActive=function(type){
         $scope.bobbyActive='';
         $scope.magnusActive='';
+        $scope.mainActive='';
         $scope[type+ 'Active']='active';
 
     }
