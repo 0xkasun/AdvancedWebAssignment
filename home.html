@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="players">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/controllers/app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/home_style.css"/>
+    <link rel="stylesheet" href="css/extra.css"/>
+
+    <script>
+        $(function() {
+            $( "#accordion" ).accordion();
+        });
+    </script>
+
+    <script>
+        $(function() {
+            $("#chess").click(function(){
+                $("#ava").attr('src',"res/knight.jpg");
+                $("#chess").attr('color', 'red');
+                return false;
+            });
+
+            $("#rugger").click(function(){
+                $("#ava").attr('src',"res/rugger.jpg");
+                return false;
+            });
+
+            $("#cricket").click(function(){
+                $("#ava").attr('src',"res/cricket.jpg");
+                return false;
+            });
+
+        });
+    </script>
+
+    <script>
+        function changeChess(){
+            document.getElementById("sidebar").style.backgroundColor="rgba(154, 57, 211, 0.658824)";
+            //rgba(154, 57, 211, 0.658824)
+        }
+        function changeRugger(){
+            document.getElementById("sidebar").style.backgroundColor="rgba(160, 35, 35, 0.760784)";
+        }
+        function changeCricket(){
+            document.getElementById("sidebar").style.backgroundColor="rgba(77, 65, 179, 0.76)";
+        }
+
+    </script>
+
+
+</head>
+<body ng-controller="playerControl">
+<main>
+    <section>
+        <div id="trigger">☰</div> <h1 id="heading">  All time greats </h1>
+        <!--<h1 id="heading">All time greats <a id="welcome_screen" href="#/" ng-class="mainActive" ng-click="setActive('main')">All Players</a></h1>-->
+    </section>
+</main>
+
+<aside id="sidebar">
+    <div id="accordion">
+        <div class="avatar-frame">
+            <img id="ava" src="res/default.jpg" alt=""/>
+        </div>
+        <br/>
+        <h3 id="chess" onclick="changeChess()">Chess Players</h3>
+        <div id="accordian">
+            <!--<a class="player" href="#/" ng-class="mainActive"  ng-click="setActive('bobby')">~ Home ~</a>-->
+            <!--<hr/>-->
+            <a class="player" href="#/bobby" ng-class="bobbyActive"  ng-click="setActive('bobby')">~ Bobby Fisher ~</a>
+            <hr/>
+            <a class="player" href="#/magnus" ng-class="magnusActive"  ng-click="setActive('magnus')">~ Magnus Carlsen ~</a>
+            <hr/>
+
+        </div>
+        <h3 id="rugger" onclick="changeRugger()">Rugger Players</h3>
+        <div>
+            <!--<p>~ Jonah Lomu ~</p>-->
+            <!--<p>~ Kieran Read ~</p>-->
+            <a class="player" href="#/jonah" ng-class="bobbyActive"  ng-click="setActive('bobby')">~ Jonah Lomu ~</a>
+            <hr/>
+            <a class="player" href="#/read" ng-class="bobbyActive"  ng-click="setActive('bobby')">~ Kieran Read ~</a>
+            <hr/>
+        </div>
+        <h3 id="cricket" onclick="changeCricket()">Cricket Players</h3>
+        <div>
+            <!--<p>~ Donald Bradman ~</p>-->
+            <!--<p>~ Kumar Snagakkara ~</p>-->
+            <a class="player" href="#/brad" ng-class="bobbyActive"  ng-click="setActive('bobby')">~ Donald Bradman ~</a>
+            <hr/>
+            <a class="player" href="#/kumar" ng-class="bobbyActive"  ng-click="setActive('bobby')">~ Kumar Snagakkara ~</a>
+            <hr/>
+        </div>
+    </div>
+
+</aside>
+
+
+<article>
+    <div id="menu">
+        <ul>
+            <li><a href="#/bobby" ng-class="bobbyActive"  ng-click="setActive('bobby')"> Bobby Fisher </a></li>
+            <li>Works</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div id="content">
+
+        <script>
+            $("#trigger").click(function() {
+                $("#menu").toggleClass("active");
+            });
+
+            $("#trigger").click(function() {
+                $("#trigger").toggleClass("active");
+            });
+        </script>
+    </div>
+    <div class="main_content" ng-view></div>
+</article>
+
+<footer>
+    Kasun Balasooriya <br/>
+    2012CS018
+</footer>
+</body>
+</html>
